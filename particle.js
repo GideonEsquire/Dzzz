@@ -13,7 +13,7 @@ function Particle(x, y) {
 
     this.show = function() {
         stroke(255, 10);
-        strokeWeight(2);
+        strokeWeight(1);
         line(this.pos.x, this.pos.y, this.prev.x, this.prev.y);
 
         this.prev.x = this.pos.x;
@@ -25,8 +25,8 @@ function Particle(x, y) {
         // var force = target - this.pos
         var force = p5.Vector.sub(target, this.pos);
         var dsquared = force.magSq();
-        dsquared = constrain(dsquared, 25, 400);
-        var G = 6.67408;
+        dsquared = constrain(dsquared, 25, 30);
+        var G = 3;
         var strenth = G / dsquared;
         force.setMag(strenth);
         this.acc.add(force);

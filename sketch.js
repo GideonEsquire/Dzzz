@@ -2,13 +2,26 @@ var attractors = [];
 var particles = [];
 
 function setup() {
-    createCanvas(800, 800);
-    for (var i = 0; i < 30; i++) {
-        particles.push(new Particle(400,400));
+    createCanvas(windowWidth, windowHeight);
+    for (var i = 0; i < 500; i++) {
+        particles.push(new Particle(width/2,height/2));
     }
-    for (var i = 0; i < 20; i++) {
-        attractors.push(createVector(random(width), random(height)));
-    }
+
+    // for (var i = 0; i < 2; i++) {
+    //     attractors.push(createVector(random(width), random(height)));
+    //     // attractors.push(createVector(width/2, height/2));
+    // }
+    
+    // attractors.push(createVector(width*.25, height*.25));
+    // attractors.push(createVector(width*.25, height*.75));
+    // attractors.push(createVector(width*.75, height*.25));
+    // attractors.push(createVector(width*.75, height*.75));
+
+    attractors.push(createVector(width*.25, height*.5));
+    // attractors.push(createVector(width*.5, 0));
+    // attractors.push(createVector(width, height*.5));
+    attractors.push(createVector(width*.5, height*.75));
+
     background(51);
 
 }
