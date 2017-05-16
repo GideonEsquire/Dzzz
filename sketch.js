@@ -11,7 +11,7 @@ function setup() {
     //     attractors.push(createVector(random(width), random(height)));
     //     // attractors.push(createVector(width/2, height/2));
     // }
-    
+    //
     // attractors.push(createVector(width*.25, height*.25));
     // attractors.push(createVector(width*.25, height*.75));
     // attractors.push(createVector(width*.75, height*.25));
