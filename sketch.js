@@ -1,24 +1,23 @@
-var attractors = [];
+// var attractors = [];
 var particles = [];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(51);
 
-  for (var i = 0; i < windowWidth; i++) {
-    particles.push(new Particle(i,0));
+  for (let i = 0; i < windowWidth; i+=10) {
+    particles.push(new Particle(i,-1));
+    particles.push(new Particle(i,windowHeight+1));
   }
 
 }
 
 function draw() {
-  stroke(255);
-  strokeWeight(4);
 
-  for (var i = 0; i < particles.length; i++) {
+  for (let i = 0; i < particles.length; i++) {
     particles[i].attracted(createVector(mouseX, mouseY));
     particles[i].update();
     particles[i].show();
   }
+  background(51, 10);
 
 }
